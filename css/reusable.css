@@ -1,0 +1,10 @@
+/* Css file to remove redudant css code */
+
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}

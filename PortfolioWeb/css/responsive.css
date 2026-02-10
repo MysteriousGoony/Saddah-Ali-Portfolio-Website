@@ -1,0 +1,298 @@
+/* Styling to make the website responsive to different devices */
+
+
+
+/* not displaying side navigation because it is desktop version */
+.rsp-side-navigation {
+    display: none;
+}
+
+.rsp-nav-items {
+    display: none;
+}
+
+
+
+
+/* Media Queries for Responsive Design - starting with 768px */
+
+@media (max-width: 768px) {
+  
+    body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+    }
+
+    /* Hide desktop navigation */
+    .btn-resume {
+        display: none;
+    }
+    
+    .navigation {
+        display: none;
+    }
+
+    /* Showing the menu icons on mobile */
+    #open-menu-icon, 
+    #close-menu-icon {
+        display: block;
+    }
+
+    /* Responsive side navigation styling */ 
+    .rsp-side-navigation {
+        display: block;
+        background: linear-gradient(to bottom, #000000, #050505);
+        border-bottom: 2px solid #292727;
+        position: fixed;
+        width: 100%;
+        
+    }
+
+    .rsp-nav-items {
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+        gap: 1.7rem;
+        padding: 1rem 2rem;
+    }
+    
+    .rsp-nav-items a {
+        transition: color 0.1s ease-in;
+        color: var(--font-color-w);
+        font-weight: var(--fw-regular);
+    }
+
+    .rsp-nav-items a:active, 
+    .rsp-nav-items a:hover { 
+        color: var(--font-color-r);
+    }
+
+    /* Mobile Resume button styling */
+    .rsp-btn-resume {
+        background-color: var(--font-color-r); 
+        color: var(--font-color-b) !important;                   
+        border-radius: 10px;     
+        padding: 10px 10px; 
+        text-align: center;      
+        font-weight: var(--fw-bold) !important;
+    }
+
+    .rsp-btn-resume:focus-visible {
+        outline: none;
+        box-shadow: 0 0 0 2px #000, 0 0 0 4px var(--font-color-r);
+    }
+
+    .rsp-nav-items li:last-child {
+        margin-top: 0.4rem;
+    }
+    /* End of Responsive side navigation styling */ 
+
+     /* Start of Home Content Responsivness for 768px */ 
+
+     /* Here, we have the desktop version of padding top as 6rem, for mobile or below, we are going to have 3rem. 
+     Just Makes it look better and not have that big gap */ 
+     #home {
+     padding-top: 3rem;
+     padding-bottom: 2rem;
+    }
+
+    .image-border:hover {
+     box-shadow: none;
+    }
+     /* End of Home Content Responsivness for 768px */ 
+
+
+     #about {
+        padding-top: 2rem; 
+     }
+
+
+
+     #contact {
+    padding-top: 5rem;
+  }
+
+  .inner-contact-section {
+    padding: 1rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .contact-info-left {
+    gap: 1.25rem;
+  }
+
+  .information-block {
+    align-items: flex-start;
+  }
+
+
+  .contact-method {
+    flex-direction: row;
+    gap: 0.75rem;
+  }
+
+  .contact-method label {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .contact-form-right button {
+    padding: 0.9rem;
+    font-size: 0.95rem;
+  }
+
+
+
+
+
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-text {
+    max-width: none;
+  }
+
+
+     
+}
+
+
+
+
+ /* Media Queries for Responsive Design - with 1003px */   
+
+@media (max-width: 1003px) {
+
+   /* Start of Home Content Responsivness for 1003px */ 
+  .inner-home-content {
+    flex-direction: column;
+  }
+
+  .home-left {
+    align-items: center;
+    justify-content: center ;
+  }
+   
+  .home-description {
+    text-align: center;
+
+  }
+
+   /* End of Home Content Responsivness for 1003px */ 
+
+
+   
+ .button-card-we-ed {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    align-items: stretch;
+ }
+   
+
+ 
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact-form-right {
+    padding: 3rem;
+  }
+  
+ 
+
+ 
+}
+
+@media (max-width: 638px) {
+
+   /* Start of About Content Responsivness for 638px */ 
+    .work-experience {
+       width: 100%;
+    }
+
+    .education {
+        width: 100%;
+    }
+   /* End of About Content Responsivness for 638px */ 
+}
+
+
+
+
+
+ /* Media Queries for Responsive Design - with 535px */   
+
+@media (max-width: 535px) {
+
+    /* Start of Home Content Responsivness for 535px */ 
+    .social-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+    }
+     /* End of Home Content Responsivness for 535px */ 
+
+
+     /* Start of About Content Responsivness for 535px */ 
+     .skill-row-content {
+        display: flex;
+        flex-direction: column;
+     }
+     
+     .skill-row-content-right {
+        display: flex;
+        flex-direction: column;
+     }
+     /* End of About Content Responsivness for 535px */ 
+
+
+      .contact-container {
+        display: none
+      }
+    }
+
+   
+
+
+
+
+
+ /* Media Queries for Responsive Design - with 390px */   
+
+
+@media (max-width: 390px){
+
+   /* Start of Home Content Responsivness for 390px */ 
+  .inner-home-content {
+    padding: 1.5rem;
+ }
+   /* End of Home Content Responsivness for 390px */ 
+
+}
+
+
+
+
+
+ /* Media Queries for Responsive Design - with 350px */   
+
+@media (max-width: 350px){
+  
+   /* Start of Home Content Responsivness for 350px */ 
+ .inner-home-content {
+    padding: 0.5rem;
+ }
+   /* End of Home Content Responsivness for 390px */ 
+}
